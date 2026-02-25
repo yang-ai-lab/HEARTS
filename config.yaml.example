@@ -1,6 +1,6 @@
-dataset_name: shhs_local
+dataset_name: cgmacros
 task:
-  name: hypopnea_range
+  name: cgm_stat_calculation
   params:
     # Add task-specific parameters here
     example_param: value
