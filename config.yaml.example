@@ -1,0 +1,16 @@
+dataset_name: shhs_local
+task:
+  name: hypopnea_range
+  params:
+    # Add task-specific parameters here
+    example_param: value
+num_test: 1
+# NOTE: This should check from utils/model_enums.py, or simple `uv run run_exp.py --help` to see available models.
+model_name: gpt-4.1-mini
+agent:
+  name: codeact
+  params:
+    verbose: true
+    timeout: 120
+fix_test_cases_dir: null
+result_dir: results/

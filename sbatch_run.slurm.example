@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --job-name=hearts
+#SBATCH --output=/u/<username>/logs/hearts_%j.out # <- replace <username> with your actual username, and remember to create the logs directory if it doesn't exist
+#SBATCH --time=12:00:00
+#SBATCH --mem=32G
+#SBATCH --cpus-per-task=16
+#SBATCH --partition=cpu
+#SBATCH --account=besp-delta-cpu # <-- check with command `accounts`
+### GPU options ###
+# #SBATCH --gpus-per-node=0
+# #SBATCH --gpu-bind=none
+
+echo "job is starting on `hostname`"
+cd /u/<username>/codebases/HEARTS # <- cd to your codebase directory
+uv run run_exp_concur.py --n-jobs 5 --task <task_name> --num-test <test_number> # <- replace <task_name> and <test_number> with your desired values
+
+echo "finish"
+# sbatch sbatch_run.slurm

@@ -1,0 +1,30 @@
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+data/
+.env
+agent_working/
+results/
+logs/
+*.ipynb
+!vis/*.ipynb
+config.yaml
+*.slurm
+visualizations/
+.github/
+*.yaml
+CLAUDE.md
+.claude/
+analysis/
+notebooks/
+vis/
+
+# Keep yaml files in yamls directory
+!yamls/*.yaml
+tmp/

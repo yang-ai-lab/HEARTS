@@ -1,0 +1,51 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --job-name=<job_name> # <- NOTE: replace <job_name> with your desired job name
+#SBATCH --output=<output_path>%j.out # <- NOTE: replace <output_path> with your desired log path
+#SBATCH --time=12:00:00 # <- NOTE: adjust time as needed
+#SBATCH --mem=64G # <- NOTE: adjust memory as needed
+#SBATCH --cpus-per-task=16 # <- NOTE: adjust CPU cores as needed
+#SBATCH --partition=cpu
+#SBATCH --account=besp-delta-cpu # <-- NOTE: check with command `accounts`
+### GPU options ###
+# #SBATCH --gpus-per-node=0
+# #SBATCH --gpu-bind=none     # <- NOTE: or closest
+
+# NOTE: this script shows how to run ./freeze_test_cases.py for all datasets and tasks specified in ./tosave.yaml. can be transferred to other scripts (like running experiments) easily.
+# NOTE: ./tosave.yaml contains key: dataset_name, value: list of tasks to run
+
+# NOTE: use this: `bash <slurm_script_name>.slurm` to run locally for testing, and use `sbatch <slurm_script_name>.slurm` to submit to the cluster
+
+echo "job is starting on `hostname`"
+
+# NOTE: change directory to your codebase path
+cd <codebase_path>
+source .venv/bin/activate
+
+n_jobs=32
+num_test=200
+# NOTE: change to your desired save path
+save_path="<save_path>"
+config_path="./tosave.yaml"
+
+echo "Freeze ${num_test} test samples at $(date)"
+
+# copy tosave.yaml to save_path for record
+cp $config_path $save_path
+
+python -c "
+import yaml
+with open('$config_path') as f:
+    data = yaml.safe_load(f)
+for dataset_name in data:
+    for task in data[dataset_name]:
+        print(f'uv run freeze_test_cases.py --dataset-name {dataset_name} --n-jobs $n_jobs --num-test $num_test --task {task} --log-level INFO --save-path $save_path')
+" | while read cmd; do
+    eval "$cmd"
+    if [ $? -ne 0 ]; then
+        echo "ERROR: $cmd" >> fail_full_freeze.log
+    fi
+done
+
+echo "full run finish"
