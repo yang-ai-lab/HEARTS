@@ -1,11 +1,6 @@
 # HEARTS: Health Reasoning over Time Series
 
 <div align="center">
-  <a href="https://img.shields.io/badge/Python-%3E%3D3.11-3776AB"><img src="https://img.shields.io/badge/Python-%3E%3D3.11-3776AB" alt="Python >= 3.11"></a>
-  <a href="https://astral.sh/uv/"><img src="https://img.shields.io/badge/uv-managed-111827" alt="uv managed"></a>
-  <a href="https://github.com/topics/time-series"><img src="https://img.shields.io/badge/time--series-benchmark-0ea5e9" alt="time-series benchmark"></a>
-  <a href="https://github.com/topics/llm-agent"><img src="https://img.shields.io/badge/LLM-agent-f97316" alt="LLM agent"></a>
-  <a href="https://huggingface.co/datasets/yang-ai-lab/HEARTS"><img src="https://img.shields.io/badge/Hugging%20Face-dataset-FF9D00?logo=huggingface&logoColor=black" alt="Hugging Face dataset"></a>
   <a href="https://yang-ai-lab.github.io/HEARTS">
     <img src="https://raw.githubusercontent.com/yang-ai-lab/HEARTS/refs/heads/website/data/hero_figure.png" alt="HEARTS" width="92%"/>
   </a>
@@ -85,11 +80,11 @@ HEARTS is designed to evaluate this full range in a single unified setting.
 
 ## 🔍 Key findings
 
-- LLMs underperform specialized time-series models on many health reasoning tasks.
-- HEARTS performance is only weakly correlated with broad "general reasoning" indices.
+- LLMs underperform specialized time-series models on many health reasoning tasks. And performance on HEARTS is only weakly correlated with broad "general reasoning" indices.
 - Models often rely on low-complexity heuristics (copying/interpolation/rule shortcuts) instead of deep temporal reasoning.
-- Performance degrades with longer sequences and higher sampling frequencies.
-- Models in the same family show similar failure patterns, suggesting scaling alone is not sufficient.
+- Performance degrades with longer sequences and higher sampling frequencies, with a shared, model-agnostic difficulty ordering across domains and input modalities. 
+- Models in the same family show similar performance patterns, suggesting scaling alone is not sufficient.
+- The input format of time-series (text/image/raw file) mainly shifts absolute performance, while relative task difficulty remains consistent across formats.
 
 ---
 
