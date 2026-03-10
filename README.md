@@ -275,7 +275,7 @@ If you use HEARTS in your research, please cite:
 @article{hearts2026,
   title={HEARTS: Benchmarking LLM Reasoning on Health Time Series},
   author={Sirui Li and Shuhan Xiao and Mihir Joshi and Ahmed Metwally and Daniel McDuff and Wei Wang and Yuzhe Yang},
-  journal={arXiv preprint},
+  journal={arXiv preprint arXiv:2603.06638},
   year={2026}
 }
 ```
