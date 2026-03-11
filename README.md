@@ -10,7 +10,7 @@
 
 **HEARTS (Health Reasoning over Time Series)** is a benchmark and evaluation framework for testing how well LLM agents reason over real-world health time-series data.
 
-🌐 **[Website](https://yang-ai-lab.github.io/HEARTS)** | 🤗 **[Data](https://huggingface.co/datasets/yang-ai-lab/HEARTS)** | 🏃 **[Quickstart](#-quickstart-frozen-eval)** | ⚙️ **[Configuration](#-configuration)** | 🧪 **[Experiments](#-experiments)** | 🕵️ **[Agents](#-agents)** | 📚 **[Citation](#-citation)**
+📄 **[Paper](https://arxiv.org/abs/2603.06638)** | 🌐 **[Website](https://yang-ai-lab.github.io/HEARTS)** | 🤗 **[Data](https://huggingface.co/datasets/yang-ai-lab/HEARTS)** | 🏃 **[Quickstart](#-quickstart-frozen-eval)** | ⚙️ **[Configuration](#-configuration)** | 🧪 **[Experiments](#-experiments)** | 🕵️ **[Agents](#-agents)** | 📚 **[Citation](#-citation)**
 
 ---
 
