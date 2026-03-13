@@ -48,20 +48,27 @@ Domains include motion, metabolic health, surgery, sleep, respiration, emotion, 
 ## 📚 Table of contents
 
 - [HEARTS: Health Reasoning over Time Series](#hearts-health-reasoning-over-time-series)
-    - [🔬 Overview](#-overview)
-    - [📚 Table of contents](#-table-of-contents)
-    - [🫀 Why HEARTS](#-why-hearts)
-    - [🔍 Key findings](#-key-findings)
-    - [🚀 Features](#-features)
-    - [🛠️ Installation](#️-installation)
-    - [🏃 Quickstart](#-quickstart)
-    - [⚙️ Configuration](#️-configuration)
-    - [📊 Results and logs](#-results-and-logs)
-    - [📂 Project structure](#-project-structure)
-    - [🧪 Experiments](#-experiments)
-    - [🕵️ Agents](#️-agents)
-    - [🤝 Contributing](#-contributing)
-    - [📚 Citation](#-citation)
+  - [🔬 Overview](#-overview)
+    - [📏 Benchmark at a glance](#-benchmark-at-a-glance)
+    - [🏆 Current Leaderboard](#-current-leaderboard)
+  - [📚 Table of contents](#-table-of-contents)
+  - [🫀 Why HEARTS](#-why-hearts)
+  - [🔍 Key findings](#-key-findings)
+  - [🚀 Features](#-features)
+  - [🛠️ Installation](#️-installation)
+    - [1) Install `uv`](#1-install-uv)
+    - [2) Sync dependencies](#2-sync-dependencies)
+    - [3) Configure model provider credentials](#3-configure-model-provider-credentials)
+  - [🏃 Quickstart](#-quickstart)
+    - [Fixed test case layout](#fixed-test-case-layout)
+    - [Run](#run)
+  - [⚙️ Configuration](#️-configuration)
+  - [📊 Results and logs](#-results-and-logs)
+  - [📂 Project structure](#-project-structure)
+  - [🧪 Experiments](#-experiments)
+  - [🕵️ Agents](#️-agents)
+  - [🤝 Contributing](#-contributing)
+  - [📚 Citation](#-citation)
 
 ---
 
@@ -238,16 +245,11 @@ Logs (agent state):
 
 ## 🧪 Experiments
 
-Experiments are defined in `exp/{dataset_name}/{task}.py`. For details on adding new experiments, see `exp/README.md`.
+Experiments are defined in `exp/{dataset_name}/{task}.py`.
+For details on adding new experiments, see [`exp/README.md`](exp/README.md).
 
-Examples of included datasets:
-
-- `bridge2ai_voice`: voice analysis tasks (Parkinson's prediction, etc.)
-- `capture24`: activity tracking and health monitoring
-- `coswara`: COVID-19 detection from audio
-- `vitaldb`: vital signs monitoring and prediction
-
----
+**Examples of included datasets:**
+- `cgmacros`: Continuous Glucose Monitoring (CGM) analysis tasks
 
 ## 🕵️ Agents
 
