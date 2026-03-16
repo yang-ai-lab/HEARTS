@@ -1,0 +1,16 @@
+Model,Overall Score,Type,Source,Icon
+Nemotron Nano 12B V2,0.47,Non-Reasoning,Open-source,nvidia-color.png
+Llama 4 Maverick,0.58,Non-Reasoning,Open-source,meta-color.png
+MiniMax M2,0.60,Reasoning,Open-source,minimax-color.png
+Naive Baseline,0.61,Non-Reasoning,Open-source,naive.png
+Gemini 2.5 Pro,0.62,Reasoning,Proprietary,gemini-color.png
+Gemini 2.5 Flash,0.62,Reasoning,Proprietary,gemini-color.png
+GPT 5 Mini,0.62,Reasoning,Proprietary,openai.png
+GPT 4.1 Mini,0.63,Non-Reasoning,Proprietary,openai.png
+Claude 4.5 Haiku,0.63,Non-Reasoning,Proprietary,claude-color.png
+Qwen3 235B,0.63,Non-Reasoning,Open-source,qwen-color.png
+Qwen3 Coder 480B,0.63,Non-Reasoning,Open-source,qwen-color.png
+DeepSeek V3.1,0.64,Non-Reasoning,Open-source,deepseek-color.png
+Grok 4.1 Fast,0.65,Reasoning,Proprietary,grok.png
+Kimi K2 Thinking,0.65,Reasoning,Proprietary,kimi-color.png
+GLM 4.7,0.66,Reasoning,Proprietary,chatglm-color.png
