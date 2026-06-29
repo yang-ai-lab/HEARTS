@@ -7,7 +7,7 @@
 #SBATCH --mem=64G # <- NOTE: adjust memory as needed
 #SBATCH --cpus-per-task=16 # <- NOTE: adjust CPU cores as needed
 #SBATCH --partition=cpu
-#SBATCH --account=besp-delta-cpu # <-- NOTE: check with command `accounts`
+#SBATCH --account=your-account-id # <-- NOTE: check with command `accounts`
 ### GPU options ###
 # #SBATCH --gpus-per-node=0
 # #SBATCH --gpu-bind=none     # <- NOTE: or closest

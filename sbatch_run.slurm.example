@@ -7,7 +7,7 @@
 #SBATCH --mem=32G
 #SBATCH --cpus-per-task=16
 #SBATCH --partition=cpu
-#SBATCH --account=besp-delta-cpu # <-- check with command `accounts`
+#SBATCH --account=your-account-id # <-- check with command `accounts`
 ### GPU options ###
 # #SBATCH --gpus-per-node=0
 # #SBATCH --gpu-bind=none
