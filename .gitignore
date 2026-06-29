@@ -1,0 +1,10 @@
+# Local-only files — not part of the deployed static site
+HEARTS___Arxiv.pdf
+ref_resources/
+tailwind.input.css
+
+# Local dev: cloudflare tunnel / slurm serving artifacts
+cloudflared_*.log
+tunnel_*.log
+tunnel_url_*.txt
+serve_tunnel.sbatch
